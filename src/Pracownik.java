@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Pracownik {
     private String Imię;
     private String Nazwisko;
-    private int Wiek;
     private int Płaca;
     private String Adres;
 
@@ -13,8 +12,6 @@ public class Pracownik {
         this.Imię = input.next();
         System.out.println("podaj Nazwisko:");
         this.Nazwisko = input.next();
-        System.out.println("podaj Wiek:");
-        this.Wiek = Integer.parseInt(input.next());
         System.out.println("podaj Płace:");
         this.Płaca = Integer.parseInt(input.next());
         System.out.println("podaj Adres:");
@@ -36,15 +33,6 @@ public class Pracownik {
         this.Nazwisko = Nazwisko;
     }
 
-
-    public int getWiek() {
-        return Wiek;
-    }
-
-    public void setWiek(int Wiek) {
-        this.Wiek = Wiek;
-    }
-
     public int getPłaca() {
         return Płaca;
     }
@@ -54,7 +42,7 @@ public class Pracownik {
     }
 
     public String toString() {
-        String tekst = "Imię:" + Imię +"\nNazwisko:"+Nazwisko+"\nPłaca:" + Płaca + "\nWike:" + Wiek +"\nAdres:"+Adres;
+        String tekst = "Imię:" + Imię +"\nNazwisko:"+Nazwisko+"\nPłaca:" + Płaca + "\nAdres:"+Adres;
         return tekst;
 
     }}
