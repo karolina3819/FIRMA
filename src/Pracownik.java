@@ -54,7 +54,7 @@ public class Pracownik {
     }
 
     public String toString() {
-        String tekst = "Imię to:" + Imię +"Nazwisko to:"+Nazwisko+"Płaca to:" + Płaca + " Wike to :" + Wiek +"Adres to:"+Adres;
+        String tekst = "Imię:" + Imię +"\nNazwisko:"+Nazwisko+"\nPłaca:" + Płaca + "\nWike:" + Wiek +"\nAdres:"+Adres;
         return tekst;
 
     }}
