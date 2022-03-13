@@ -17,13 +17,16 @@ public class Firma {
                     lista_aut.add(new Pracownik());
                     break;
 
-                case "all":
-                    System.out.println(lista_aut.toString());
+                case "all"://dodac kolejnosc zeby potem usuwac
+                    for (Pracownik temp : lista_aut){
+                        System.out.println(temp.toString());
+                    }
+
                     break;
                 case "z":
-                    System.out.println("Podaj dane pracownika");
-                    System.int kogo_usunac = input.nextInt();
-                    lista_aut.remove(kogo_usunac);
+                    //System.out.println("Podaj dane pracownika");
+                    //System. int kogo_usunac = input.nextInt();
+                    //lista_aut.remove(kogo_usunac);
                     break;
                 //    case "p":
 
