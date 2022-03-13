@@ -1,48 +1,52 @@
 import java.util.Scanner;
 
 public class Pracownik {
-    private String Imię;
-    private String Nazwisko;
-    private int Płaca;
-    private String Adres;
+    private String imie;
+    private String nazwisko;
+    private int placa;
+    private String adres;
 
     public Pracownik() {
         Scanner input = new Scanner(System.in);
         System.out.println("podaj Imię :");
-        this.Imię = input.next();
+        this.imie = input.next();
         System.out.println("podaj Nazwisko:");
-        this.Nazwisko = input.next();
+        this.nazwisko = input.next();
         System.out.println("podaj Płace:");
-        this.Płaca = Integer.parseInt(input.next());
+        this.placa = Integer.parseInt(input.next());
         System.out.println("podaj Adres:");
-        this.Adres = input.next();
+        this.adres = input.next();
     }
 
-    public String getImię() {
-        return Imię;
+    public String getImie() {
+        return imie;
     }
 
-    public void setImię(String Imię) {
-        this.Imię = Imię;
+    public void setImie(String Imię) {
+        this.imie = Imię;
     }
     public String getNazwisko() {
-        return Nazwisko;
+        return nazwisko;
     }
 
     public void setNazwisko(String Nazwisko) {
-        this.Nazwisko = Nazwisko;
+        this.nazwisko = Nazwisko;
     }
 
-    public int getPłaca() {
-        return Płaca;
+    public int getPlaca() {
+        return placa;
     }
 
-    public void setPłaca(int Płaca) {
-        this.Płaca = Płaca;
+    public void setPlaca(int Płaca) {
+        this.placa = Płaca;
+    }
+
+    public void podwyzka(int podwyzka){
+        placa+=podwyzka;
     }
 
     public String toString() {
-        String tekst = "Imię:" + Imię +"\tNazwisko:"+Nazwisko+"\tPłaca:" + Płaca + "\tAdres:"+Adres;
+        String tekst = "Imię:" + imie +"\tNazwisko:"+ nazwisko +"\tPłaca:" + placa + "\tAdres:"+ adres;
         return tekst;
 
     }}

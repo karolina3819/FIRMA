@@ -1,3 +1,8 @@
+import javafx.scene.chart.ScatterChart;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,24 +23,55 @@ public class Firma {
                     break;
 
                 case "all"://dodac kolejnosc zeby potem usuwac
-                    for (Pracownik temp : lista_aut){
+                    for (Pracownik temp : lista_aut) {
                         System.out.println(temp.toString());
                     }
 
                     break;
                 case "z":
-                    //System.out.println("Podaj dane pracownika");
-                    //System. int kogo_usunac = input.nextInt();
-                    //lista_aut.remove(kogo_usunac);
+                    System.out.println("Podaj indeks pracownika");
+                    int kogo_usunac = input.nextInt();
+                    lista_aut.remove(kogo_usunac);
                     break;
-                //    case "p":
+                case "p":
+                    System.out.println("Podaj indeks pracownika");
+                    int kommu = input.nextInt();
+                    System.out.println("Podaj o ile ");
+                    int wartosc = input.nextInt();
+                    lista_aut.get(kommu).podwyzka(wartosc);
 
-                //        break;
-                //    case "$":
 
-                //        break;
-                //    default:
-                //        break;
+                    break;
+                case "$":
+                    int wszystkiePlace = 0;
+                    for (Pracownik temp : lista_aut) {
+                        wszystkiePlace += temp.getPlaca();
+                    }
+                    System.out.println(wszystkiePlace);
+                    break;
+
+                case "plik":
+                    try {
+                        File plik = new File("plik_tekstowy.txt");
+                        plik.createNewFile();
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        FileWriter plik = new FileWriter("plik_tekstowy.txt");
+
+                        for (Pracownik temp : lista_aut) {
+                            plik.write(temp.toString()+"\n");
+                        }
+                        plik.close();
+                    }catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    break;
+                default:
+                    break;
 
             }
 
@@ -45,10 +81,4 @@ public class Firma {
 }
 
 
-//   for (int i =0;i<2;i++){
-//       lista_aut.add(new Pracownik());
-
-//   }
-//   for (Pracownik i : lista_aut){
-//       System.out.println(i.toString());
-//   }
+//
